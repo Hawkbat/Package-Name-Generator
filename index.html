@@ -11,6 +11,13 @@
         main {
             max-width: 960px;
             margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        span {
+            font-family: monospace;
+            font-weight: lighter;
         }
 
     </style>
@@ -18,11 +25,9 @@
 
 <body>
     <main>
-        <h1>Your NPM package could be named
-            <pre id="result"></pre>
-        </h1>
+        <h1>Your NPM package could be named <span id="result"></span></h1>
         <button onclick="chooseName()">Give me another name</button>
-        <p>Names are pulled from a list of words in <a href="https://github.com/matthewreagan/WebstersEnglishDictionary">Webster's English Dictionary</a> that returned no results when searched for on NPM. Last updated in June 2019, where out of 102,117 total words, 75,786 were not found.</p>
+        <p>Names are pulled from a list of words in <a href="https://github.com/matthewreagan/WebstersEnglishDictionary">Webster's English Dictionary</a> that returned no results when searched for on NPM using <span>npm search</span>. Last updated in June 2019, where out of 102,117 total words, 75,786 were not found.</p>
     </main>
     <script>
         var arr = DICTIONARY
