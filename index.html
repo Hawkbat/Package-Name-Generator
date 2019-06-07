@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NPM Package Name Generator</title>
+    <script src="results.js"></script>
+    <style>
+        main {
+            max-width: 960px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Your NPM package could be named
+            <pre id="result"></pre>
+        </h1>
+        <button onclick="chooseName()">Give me another name</button>
+        <p>Names are pulled from a list of words in <a href="https://github.com/matthewreagan/WebstersEnglishDictionary">Webster's English Dictionary</a> that returned no results when searched for on NPM, as of June 2019.</p>
+    </main>
+    <script>
+        var arr = DICTIONARY
+
+        function chooseName() {
+            document.getElementById('result').textContent = arr[Math.floor(Math.random() * arr.length)]
+        }
+
+        chooseName()
+    </script>
+</body>
+
+</html>
